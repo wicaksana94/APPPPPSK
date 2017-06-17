@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1e2d113e-f3dd-4821-b47e-ca048bf75692">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM pendaftar]]>
+	</queryString>
+	<field name="id_pendaftar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desakelurahan_pendaftar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RT" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="RW" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pengguna" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="70" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="226" splitType="Stretch">
+			<textField>
+				<reportElement style="Detail" x="35" y="80" width="37" height="15" uuid="bb887a9e-2051-4508-ab89-f9f868a30b9a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_pendaftar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="90" y="80" width="83" height="15" uuid="c4c074e5-107c-4384-8ca5-dae4b1a048ce"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="191" y="81" width="9" height="15" uuid="3d8fdf40-4706-4806-9f8e-23a7db8aeff3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="225" y="80" width="64" height="15" uuid="2968acee-a5b2-4a84-a11e-3fd9219dceb4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desakelurahan_pendaftar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="307" y="80" width="150" height="15" uuid="2d06ded3-8e76-4152-9053-25f505eb7449"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="475" y="80" width="8" height="15" uuid="b8a09abd-2da3-4bdd-bc8f-205e82f935b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="501" y="80" width="9" height="15" uuid="3fe32054-8022-480e-ae88-a50914c5d007"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RW}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="528" y="80" width="24" height="15" uuid="2867c5d0-13fe-49c5-9f0e-ef1c3bbf1a2b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_pengguna}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Title" x="75" y="24" width="242" height="33" uuid="327c1aec-50b0-4016-a0c1-f49c696bbac1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Laporan Surat Kependudukan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="75" y="57" width="242" height="22" uuid="1c2989a1-ef8e-43dc-863f-6f191a7daa38"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Loket I - Kantor Kecamatan Temanggung]]></text>
+			</staticText>
+			<image>
+				<reportElement x="383" y="14" width="52" height="55" uuid="30182edc-d487-46ed-b9c3-0b6558904af8"/>
+				<imageExpression><![CDATA["D:\\Documents\\NetBeansProjects\\APPPPPSK Kec Temanggung\\build\\classes\\Laporan\\Logo Temanggung.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+</jasperReport>
